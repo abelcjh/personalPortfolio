@@ -1,36 +1,19 @@
-export type Project = {
-  id: string;
-  title: string;
-  description: string;
-  tags: string[];
-  /** Public site, demo, or docs */
-  liveUrl?: string;
-  /** Source repository */
-  repoUrl?: string;
-};
+import { PortfolioCardProps } from "../App.tsx";
 
-/**
- * Edit this list to showcase your work. Each project can link to a live URL,
- * a GitHub repo, or both.
- */
-export const projects: Project[] = [
+export const projects: PortfolioCardProps[] = [
   {
-    id: "personal-portfolio",
     title: "Personal portfolio",
     description:
       "This site — a fast, static showcase for projects with a calm, editorial layout and room for long-form descriptions.",
     tags: ["React", "TypeScript", "Vite"],
-    // Set your deployed URL when you publish (e.g. GitHub Pages).
-    liveUrl: undefined,
-    repoUrl: "https://github.com/YOUR_USERNAME/personalPortfolio",
+    repoUrl: "https://github.com/abelcjh/personalPortfolio",
   },
   {
-    id: "starter-example",
-    title: "Your next project",
+    title: "VoiceBridge",
     description:
-      "Replace this card with a real project: what it does, who it is for, and what you learned. You can omit liveUrl if it is library-only.",
-    tags: ["Tag one", "Tag two"],
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com/YOUR_USERNAME/your-repo",
+      "A comprehensive platform using AI in STT, translation, and TTS to bridge communication between different ethnic groups in ASEAN \
+      for disaster response. Also uses AI in automated reporting.",
+    tags: ["React Native", "TypeScript", "Groq", "ElevenLabs", "Google Cloud", "Supabase", "Node.js", "Express", "Zustand"],
+    repoUrl: "https://github.com/pangtengg/borneohack",
   },
 ];
