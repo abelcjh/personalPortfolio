@@ -1,4 +1,6 @@
 import { projects } from "./data/projects";
+import { awards } from "./data/awards";
+import { leadership } from "./data/leadership";
 import "./App.css";
 
 function ExternalIcon() {
@@ -37,6 +39,70 @@ function GitHubIcon() {
   );
 }
 
+// define object props to be checked when input card data into card component
+// important for strict type validation
+export interface PortfolioCardProps {
+  title: string;
+  description: string;
+  tags?: string[];
+  imgs?: string[];
+  liveUrl?: string;
+  repoUrl?: string;
+  liveButtonText?: string;
+}
+
+function PortfolioCard({
+            title,
+            description,
+            tags,
+            imgs,
+            liveUrl,
+            repoUrl,
+            liveButtonText = "Visit site"
+}: PortfolioCardProps) {
+  return(
+    <article className="card">
+
+      <div className="card-top">
+        <h2 className="card-title">{title}</h2>
+        {tags?.length > 0 && (
+          <ul className="tags" aria-label="Tags">
+            {tags.map((t) => (
+              <li key={t}>{t}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      <p className="card-body">{description}</p>
+
+      {imgs && (
+      <ul className="card-photos" aria-label="Photos">
+        {imgs.map((i) => {
+          <img className="photo" src={i.src} alt={i.alt} />
+        })}
+      </ul>
+      )}
+
+      <div className="card-actions">
+        {liveUrl && (
+          <a className="btn btn-primary" href={liveUrl} target='_blank' rel="noopener noreferrer">
+            <span>{liveButtonText}</span>
+            <ExternalIcon />
+          </a>
+        )}
+        {repoUrl && (
+          <a className=`btn ${liveUrl? "btn-ghost" : "btn-primary"}` href={repoUrl} target="_blank" rel="noopener noreferrer">
+            <span>Source</span>
+            <GitHubIcon />
+            <ExternalIcon />
+          </a>
+        )}
+      </div>
+    </article>
+  );
+}
+
 export default function App() {
   return (
     <div className="page">
@@ -44,7 +110,7 @@ export default function App() {
 
       <header className="hero">
         <p className="hero-kicker">Abel Chin's Personal Portfolio</p>
-        <img src="../public/AbelChinPhoto20260321.jpg" alt="Abel Chin's Photo, taken on Mar 21, 2026" />
+        <img className="hero-photo" src="../public/AbelChinPhoto20260321.jpg" alt="Abel Chin's Photo, taken on Mar 21, 2026" />
         <p className="hero-lede">
           Hi! My name is Abel Chin, an independent AI engineer, and current college AI major.
           This is a list of things I have built — both hackathon and personal projects.
@@ -52,55 +118,64 @@ export default function App() {
         </p>
       </header>
 
-      <main className="grid">
-        {projects.map((p) => (
-          <article key={p.id} className="card">
-            <div className="card-top">
-              <h2 className="card-title">{p.title}</h2>
-              <ul className="tags" aria-label="Technologies">
-                {p.tags.map((t) => (
-                  <li key={t}>{t}</li>
-                ))}
-              </ul>
-            </div>
-            <p className="card-body">{p.description}</p>
-            <div className="card-actions">
-              {p.liveUrl ? (
-                <a
-                  className="btn btn-primary"
-                  href={p.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Visit site</span>
-                  <ExternalIcon />
-                </a>
-              ) : null}
-              {p.repoUrl ? (
-                <a
-                  className={`btn ${p.liveUrl ? "btn-ghost" : "btn-primary"}`}
-                  href={p.repoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GitHubIcon />
-                  <span>Source</span>
-                  <ExternalIcon />
-                </a>
-              ) : null}
-              {!p.liveUrl && !p.repoUrl ? (
-                <span className="muted">Add links in src/data/projects.ts</span>
-              ) : null}
-            </div>
-          </article>
-        ))}
+      <main className="page-content">
+
+        {/* Projects section */}
+        <section className="portfolio-section">
+          <h2>Projects</h2>
+          <div className="grid">
+            {projects.map((p) => (
+              <PortfolioCard
+                title={p.title}
+                description={p.description}
+                tags={p.tags}
+                imgs={p.imgs}
+                liveUrl={p.liveUrl}
+                repoUrl={p.RepoUrl}
+              />
+            ))}
+          </div>
+        </section>
+        
+        {/* Awards section */}
+        <section className="portfolio-section">
+          <h2>Awards</h2>
+          <div className="grid">
+            {awards.map((a) => (
+              <PortfolioCard
+                title={a.title}
+                description={a.description}
+                tags={a.tags}
+                imgs={a.imgs}
+                liveUrl={a.liveUrl}
+                liveButtonText="View Award"
+                />
+            ))}
+          </div>
+        </section>
+
+        {/* Leadership section */}
+        <section className="portfolio-section">
+          <h2>Leadership & Community</h2>
+          <div className="grid">
+            {leadership.map((l) => (
+              <PortfolioCard
+                title={l.title}
+                description={l.description}
+                tags={l.tags}
+                imgs={l.imgs}
+                liveUrl={l.liveUrl}
+                liveButtonText="Learn More"
+                />
+            ))}
+          </div>
+        </section>
+
       </main>
 
       <footer className="footer">
         <p>
-          Built with React & Vite — edit{" "}
-          <code className="inline-code">src/data/projects.ts</code> to add your
-          work.
+          Built with TypeScript, React, and Vite.
         </p>
       </footer>
     </div>
