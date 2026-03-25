@@ -117,7 +117,7 @@ export default function App() {
 
       <header className="hero">
         <p className="hero-kicker">Abel Chin's Personal Portfolio</p>
-        <img className="hero-photo" src="../public/AbelChinPhoto20260321.jpg" alt="Abel Chin's Photo, taken on Mar 21, 2026" />
+        <img className="hero-photo" src="/AbelChinPhoto20260321.jpg" alt="Abel Chin's Photo, taken on Mar 21, 2026" />
         <p className="hero-lede">
           Hi! My name is Abel Chin, an independent AI engineer, and current college AI major.
           This is a list of things I have built — both hackathon and personal projects.

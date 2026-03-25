@@ -30,7 +30,7 @@ export const leadership: PortfolioCardProps[] = [
         liveButtonText: "Visit socials",
         imgs: [
             {
-                src: "../../public/NyalaLabsLogo.png",
+                src: "/NyalaLabsLogo.png",
                 alt: "Nyala Labs logo"
             }
         ]

@@ -48,15 +48,15 @@ export const projects: PortfolioCardProps[] = [
     Building for Good (ft. Lovable) event in KL.",
     tags: ["Vite", "TypeScript", "React", "shadcn-ui", "Tailwind CSS"],
     imgs:[{
-                  src: "../../public/UniFriend1.png",
+                  src: "public/UniFriend1.png",
                   alt: "UniFriend image 1"
               },
               {
-                  src: "../../public/UniFriend2.png",
+                  src: "public/UniFriend2.png",
                   alt: "UniFriend image 2"
               },
               {
-                  src: "../../public/UniFriend3.png",
+                  src: "public/UniFriend3.png",
                   alt: "UniFriend image 3"
               }],
     liveUrl: "https://www.linkedin.com/posts/abelchinjh_sat-oct-18-uob-plaza-1-kl-had-a-blast-with-activity-7385240223443644416-VqB1",
