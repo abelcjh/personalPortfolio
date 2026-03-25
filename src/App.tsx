@@ -39,13 +39,18 @@ function GitHubIcon() {
   );
 }
 
+interface image {
+  src: string;
+  alt: string;
+}
+
 // define object props to be checked when input card data into card component
 // important for strict type validation
 export interface PortfolioCardProps {
   title: string;
   description: string;
   tags?: string[];
-  imgs?: string[];
+  imgs?: image[];
   liveUrl?: string;
   repoUrl?: string;
   liveButtonText?: string;
@@ -77,9 +82,9 @@ function PortfolioCard({
       <p className="card-body">{description}</p>
 
       {imgs && (
-      <ul className="card-photos" aria-label="Photos">
+      <ul className="card-images" aria-label="Images">
         {imgs.map((i) => {
-          <img className="photo" src={i.src} alt={i.alt} />
+          <img className="image" src={i.src} alt={i.alt} />
         })}
       </ul>
       )}
@@ -92,7 +97,7 @@ function PortfolioCard({
           </a>
         )}
         {repoUrl && (
-          <a className=`btn ${liveUrl? "btn-ghost" : "btn-primary"}` href={repoUrl} target="_blank" rel="noopener noreferrer">
+          <a className={`btn ${liveUrl? "btn-ghost" : "btn-primary"}`} href={repoUrl} target="_blank" rel="noopener noreferrer">
             <span>Source</span>
             <GitHubIcon />
             <ExternalIcon />
@@ -132,6 +137,7 @@ export default function App() {
                 imgs={p.imgs}
                 liveUrl={p.liveUrl}
                 repoUrl={p.RepoUrl}
+                liveButtonText={p.liveButtonText? p.liveButtonText : ""}
               />
             ))}
           </div>
@@ -148,7 +154,7 @@ export default function App() {
                 tags={a.tags}
                 imgs={a.imgs}
                 liveUrl={a.liveUrl}
-                liveButtonText="View Award"
+                liveButtonText= {a.liveButtonText? a.liveButtonText : "View Award"}
                 />
             ))}
           </div>
@@ -165,7 +171,7 @@ export default function App() {
                 tags={l.tags}
                 imgs={l.imgs}
                 liveUrl={l.liveUrl}
-                liveButtonText="Learn More"
+                liveButtonText={l.liveButtonText? l.liveButtonText : "Learn More"}
                 />
             ))}
           </div>
@@ -173,7 +179,7 @@ export default function App() {
 
       </main>
 
-      <footer className="footer">
+      <footer className="footer"> 
         <p>
           Built with TypeScript, React, and Vite.
         </p>
