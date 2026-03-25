@@ -34,7 +34,7 @@ export const projects: PortfolioCardProps[] = [
     description: "Intelligent, automated nurse scheduling system designed to optimize hospital \
     workforce management. Completed with my team for AWS Great Malaysia AI Hackathon \
     2025.",
-    tags: ["Next,js", "React", "Tailwind CSS", "Framer Motion", "TypeScript", "Supabase", \
+    tags: ["Next,js", "React", "Tailwind CSS", "Framer Motion", "TypeScript", "Supabase",
               "Google OR-Tools", "XGBoost", "Vercel", "AWS"
     ],
     liveUrl: "https://drive.google.com/file/d/1PIrAnL4WX6tOyhspLhbD_Vb2Z81RP0HX/view", 
