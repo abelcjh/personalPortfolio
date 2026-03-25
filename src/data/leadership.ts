@@ -24,7 +24,7 @@ export const leadership: PortfolioCardProps[] = [
         One upcoming big event is a partnership with Momen, an Agentic AI startup based in San \
         Francisco, in delivering an Agentic AI workshop. With access to at least RM 100k in \
         government funding and facilities, we aim to reach many underprivileged groups and \
-        regions across Malaysia, working with the Ministries of Youth and Sports, and Education.
+        regions across Malaysia, working with the Ministries of Youth and Sports, and Education. \
     ",
         liveUrl: "https://linktr.ee/nyalalabs",
         liveButtonText: "Visit socials",
