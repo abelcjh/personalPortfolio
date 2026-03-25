@@ -83,9 +83,11 @@ function PortfolioCard({
 
       {imgs && (
       <ul className="card-images" aria-label="Images">
-        {imgs.map((i) => {
-          <img className="image" src={i.src} alt={i.alt} />
-        })}
+        {imgs.map((i) => (
+          <li key={i.src}>
+            <img className="image" src={i.src} alt={i.alt} />
+          </li>
+        ))}
       </ul>
       )}
 
