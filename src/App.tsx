@@ -138,7 +138,7 @@ export default function App() {
                 tags={p.tags}
                 imgs={p.imgs}
                 liveUrl={p.liveUrl}
-                repoUrl={p.RepoUrl}
+                repoUrl={p.repoUrl}
                 liveButtonText={p.liveButtonText? p.liveButtonText : ""}
               />
             ))}
