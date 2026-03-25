@@ -70,7 +70,7 @@ function PortfolioCard({
 
       <div className="card-top">
         <h2 className="card-title">{title}</h2>
-        {tags?.length > 0 && (
+        {tags && tags?.length > 0 && (
           <ul className="tags" aria-label="Tags">
             {tags.map((t) => (
               <li key={t}>{t}</li>
