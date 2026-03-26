@@ -76,7 +76,7 @@ export const projects: PortfolioCardProps[] = [
   {
     title: "Phasmophobia",
     description: "A playful game of hide and seek with ghosts where users use a device to \
-    detect 'ghosts' and converse with them real-time in speech.",
+    detect 'ghosts' and converse with them real-time in speech. Completed with my team in NUS Hack & Roll 2026.",
     tags: ["ESP32-S3-BOX-3", "LED", "ESP-IDF", "Gemini", "ElevenLabs", "SquareLine", "LVGL"],
     liveUrl: "https://devpost.com/software/ghosted-sxkpjo",
     liveButtonText: "Watch video"
