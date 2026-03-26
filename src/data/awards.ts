@@ -1,21 +1,21 @@
-import { PortfolioCardProps } from "../App.tsx";
+import { PortfolioCardProps } from "../pages/PortfolioPage.tsx";
 
 export const awards: PortfolioCardProps[] = [
   {
     title: "Artem Ventures Pace National Bootcamp 2025",
     description:
-      "Chosen to be among the 120 people/startups across Malaysia to join VC Artem \
-      Ventures' second national startup bootcamp. Applications included sharing our startup \
-      ventures and interests. I was one of the youngest to join, being among the few university \
-      students starting their startup journeys. Many others are already doing startups or are \
-      working adults keen to do startups. The bootcamp trained us to learn the basics of startups, \
-      from ideation to the market. I am still at the ideation stage, but I plan to found a startup in \
-      2026 and join BLOCK71. The bootcamp recognizes the next generation of Malaysian \
-      founders, and that enables me to network with fellow like-minded peers in Malaysia's \
-      startup scene. I also join other AI and startup-related events in Malaysia. I hope to find \
-      my co-founders soon and build my unicorn across Malaysia, Singapore, and the world. \
-      With growing connections in Malaysia, I also hope to gain funding from various entities \
-      like Cradle, Malaysia’s government VC arm, and Artem.",
+      `Chosen to be among the 120 people/startups across Malaysia to join VC Artem
+      Ventures' second national startup bootcamp. Applications included sharing our startup
+      ventures and interests. I was one of the youngest to join, being among the few university
+      students starting their startup journeys. Many others are already doing startups or are
+      working adults keen to do startups. The bootcamp trained us to learn the basics of startups,
+      from ideation to the market. I am still at the ideation stage, but I plan to found a startup in
+      2026 and join BLOCK71. The bootcamp recognizes the next generation of Malaysian
+      founders, and that enables me to network with fellow like-minded peers in Malaysia's
+      startup scene. I also join other AI and startup-related events in Malaysia. I hope to find
+      my co-founders soon and build my unicorn across Malaysia, Singapore, and the world.
+      With growing connections in Malaysia, I also hope to gain funding from various entities
+      like Cradle, Malaysia’s government VC arm, and Artem.`,
     liveUrl: "https://www.linkedin.com/posts/abelchinjh_massive-shoutout-to-artem-pace-for-this-trail-blazing-activity-7404951424318484481-Oq_i",
     liveButtonText: "View LinkedIn post"
   },

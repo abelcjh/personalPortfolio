@@ -1,4 +1,4 @@
-import { PortfolioCardProps } from "../App.tsx";
+import { PortfolioCardProps } from "../pages/PortfolioPage.tsx";
 
 export const projects: PortfolioCardProps[] = [
   {

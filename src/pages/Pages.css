@@ -17,6 +17,62 @@
   padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 4vw, 2rem) 4rem;
 }
 
+.site-nav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-nav-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 0.35rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.site-nav-link:hover {
+  color: var(--text);
+}
+
+.site-nav-link.is-active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.home-cta {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.5rem;
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-section h2 {
+  margin: 0 0 1rem;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.portfolio-section + .portfolio-section {
+  margin-top: 2.75rem;
+}
+
 .grain {
   pointer-events: none;
   position: fixed;
