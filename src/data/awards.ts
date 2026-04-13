@@ -30,5 +30,15 @@ export const awards: PortfolioCardProps[] = [
     description: "Another SDG-themed pitching competition. Me and my teammate pitched for a digital solution to address obesity in Malaysia. Reached finals alongside others older than us who were already at university, including a team from NUS. The final was livestreamed and still can be accessed. The competition was attended by several keu figures in Singapore's sustainability scene including representatives of GGEF.",
     liveUrl: "https://www.youtube.com/live/vsSy_X7xYjo",
     liveButtonText: "View Organizer YouTube livestream of Finals"
+  },
+  {
+    title: "3rd place in GMI DevHack Singapore 2026",
+    description: `Participated in this hackathon organized by SMU AI Club, along with GMI and z.ai, two intergral organizations in the global AI space.
+    We were required to use the products of the organizations to build our solutions to the given problem statement, which was
+    about developing productivity tools for entrepreneurs and solo hackers. Me and my team created a tool for businesses to forecast sales growths in expansion
+    plans given different scenarios, in Southeast Asia. Involved a chat interface between user and z.ai's GLM 5.1 model to extract business variables and formualate different scenarios,
+    Google's SeriesFM model for forecasting, and GLM 5.1 and Deepseek v3.2 for reasoning and synthesizing analyses by comparing against each other.`,
+    liveUrl: "https://www.linkedin.com/posts/abelchinjh_%F0%9D%9F%91%F0%9D%90%AB%F0%9D%90%9D-%F0%9D%90%A9%F0%9D%90%A5%F0%9D%90%9A%F0%9D%90%9C%F0%9D%90%9E-%F0%9D%90%9A%F0%9D%90%AD-%F0%9D%90%AD%F0%9D%90%A1%F0%9D%90%9E-%F0%9D%90%86%F0%9D%90%8C%F0%9D%90%88-%F0%9D%90%B1-ugcPost-7448943567869353984-b2OR?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFadv5QBZGnktNCsm4FegrkB4n31zP3oWY0",
+    liveButtonText: "View LinkedIn post and access project website"
   }
 ];
